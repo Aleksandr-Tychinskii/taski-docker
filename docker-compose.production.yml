@@ -22,7 +22,6 @@ services:
     image: aleksandrtych/taski_frontend  # Качаем с Docker Hub
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
-    restart: unless-stopped
     volumes:
       - static_volume:/frontend_static
   gateway:
